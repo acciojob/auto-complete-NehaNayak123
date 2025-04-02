@@ -34,10 +34,14 @@ const App = () => {
       />
       {suggestions.length > 0 && (
         <ul>
-          {suggestions.map((suggestion, index) => (
-            <li key={index}>{suggestion}</li>
-          ))}
-        </ul>
+  {suggestions.length > 0 ? (
+    suggestions.map((suggestion, index) => (
+      <li key={index}>{suggestion}</li>
+    ))
+  ) : (
+    <li style={{ display: "none" }}>No results</li> 
+  )}
+</ul>
       )}
     </div>
   );
