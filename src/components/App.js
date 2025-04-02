@@ -8,13 +8,13 @@ const App = () => {
   const [suggestions, setSuggestions] = useState([]);
 
   useEffect(() => {
-    const fetchSuggestions = async () => {
+    const fetchSuggestions = () => {
       if (query.trim() === "") {
         setSuggestions([]);
         return;
       }
       
-      await new Promise((resolve) => setTimeout(resolve, 300)); // Simulate async delay
+    new Promise((resolve) => setTimeout(resolve, 300)); // Simulate async delay
       
       const filtered = fruits.filter((fruit) =>
         fruit.toLowerCase().includes(query.toLowerCase())
